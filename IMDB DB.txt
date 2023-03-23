@@ -1,0 +1,122 @@
+CREATE TABLE movies (
+Id INTEGER PRIMARY KEY auto_increment,
+Title TEXT NOT NULL,
+Language TEXT NOT NULL,
+Year INTEGER NOT NULL
+);
+
+INSERT INTO movies VALUES (1, "The Matrix","English", 1999);
+INSERT INTO movies VALUES ( 2,"Gone in 60 Seconds","English", 2000);
+INSERT INTO movies VALUES (3, "Van Helsing","English", 2004);
+INSERT INTO movies VALUES ( 4,"Annapolis","English", 2006);
+INSERT INTO movies VALUES ( 5,"Never Back Down","English", 20008);
+
+SELECT * FROM movies;
+
+1.
+
+CREATE TABLE media (
+  Id INTEGER PRIMARY KEY auto_increment,
+  Title TEXT NOT NULL,
+  Size TEXT NOT NULL,
+  Duration float
+);
+
+INSERT INTO media VALUES (1,"Video","100 Mb","2.36");
+INSERT INTO media VALUES (2,"Video","121 Mb","1.99");
+INSERT INTO media VALUES (3,"Video","152 Mb","2.35");
+INSERT INTO media VALUES (4,"Video","173 Mb","1.25");
+INSERT INTO media VALUES (5,"Video","204 Mb","1.56");
+
+
+SELECT * FROM media;
+
+left join movies
+on movies.Id = media.id;
+
+
+2.
+CREATE TABLE Genre (
+  Id INTEGER PRIMARY KEY auto_increment,
+  Genre TEXT NOT NULL
+);
+
+INSERT INTO Genre VALUES (1, "Sci-fi");
+INSERT INTO Genre VALUES (2, "Action");
+INSERT INTO Genre VALUES (3, "Thriller");
+INSERT INTO Genre VALUES (4, "Fantasy");
+INSERT INTO Genre VALUES (5, "Horror");
+INSERT INTO Genre VALUES (6, "Drama");
+INSERT INTO Genre VALUES (7, "Romance");
+
+
+SELECT * FROM Genre
+
+3.
+CREATE TABLE Users (
+  Id INTEGER PRIMARY KEY auto_increment,
+  Genre TEXT NOT NULL
+);
+
+INSERT INTO Users  VALUES (1, "Hari
+");
+INSERT INTO Users  VALUES (2, "Bala
+");
+INSERT INTO Users  VALUES (3, "Asok
+");
+INSERT INTO Users  VALUES (4, "Sri Nath
+");
+INSERT INTO Users  VALUES (5, "Murugesh
+");
+
+
+
+Alter table Users
+add Rating float;
+
+
+select * from users;
+
+4.
+
+CREATE TABLE Skills (
+  Id INTEGER PRIMARY KEY auto_increment,
+  Skill TEXT NOT NULL
+);
+
+INSERT INTO Skills  VALUES (1, "Race
+");
+INSERT INTO Skills  VALUES (2, "Techie
+");
+INSERT INTO Skills  VALUES (3, "Stunt
+");
+INSERT INTO Skills  VALUES (4, "Boxer
+");
+INSERT INTO Skills  VALUES (5, "Mixed Martial Arts
+");
+
+
+
+SELECT * FROM Skills;
+
+5.
+
+CREATE TABLE Actor (
+  Id INTEGER PRIMARY KEY auto_increment,
+  Actor TEXT NOT NULL,
+  Artist_Role TEXT NOT NULL
+ );
+
+INSERT INTO Actor VALUES (1,"Keanu Reeves","Hero
+");
+INSERT INTO Actor VALUES (2,"Nicolas Cage","Hero
+");
+INSERT INTO Actor VALUES (3,"Hugh Jackman","Hero
+");
+INSERT INTO Actor VALUES (4,"Sean Faris","Hero
+");
+INSERT INTO Actor VALUES (5,"James Franco","Hero
+");
+
+SELECT * FROM Actor;
+
